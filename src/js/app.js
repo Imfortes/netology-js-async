@@ -10,9 +10,17 @@ console.log(sum([1, 2]));
   try {
     const loader = new GameSavingLoader();
     const data = await loader.load();
-    console.log(data);
+    console.log('async data', data);
 
   } catch (error) {
     console.error(error);
   }
 })()
+
+import GameSavingLoaderPromise from './classes/GameSavingLoaderPromise.js';
+
+GameSavingLoaderPromise.load().then((data) => {
+  console.log('promise data', data);
+}).catch((error) => {
+  console.error(error.message);
+});
