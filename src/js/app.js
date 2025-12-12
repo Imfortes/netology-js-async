@@ -17,6 +17,8 @@ console.log(sum([1, 2]));
   }
 })()
 
+
+
 import GameSavingLoaderPromise from './classes/GameSavingLoaderPromise.js';
 
 GameSavingLoaderPromise.load().then((data) => {
